@@ -7,12 +7,12 @@ import { LayoutService } from '../../services';
   styles: [],
 })
 export class SidebarComponent implements OnInit {
-  sidebarOpen!: boolean;
+  get sidebarOpen(): boolean {
+    return this.layoutService.sidebarOpen;
+  }
   constructor(private layoutService: LayoutService) {}
 
-  ngOnInit(): void {
-    this.sidebarOpen = this.layoutService.sidebarOpen;
-  }
+  ngOnInit(): void {}
 
   closeSidebar(): void {
     this.layoutService.closeSidebar();
