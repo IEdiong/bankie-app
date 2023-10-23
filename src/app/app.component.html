@@ -1,1 +1,13 @@
-<app-dashboard></app-dashboard>
+<div class="h-screen overflow-hidden flex items-center justify-center">
+  <div class="flex h-screen bg-gray-200 w-full">
+    <!-- ! Sidebar -->
+    <app-sidebar></app-sidebar>
+
+    <!-- ! Main container -->
+    <div class="flex flex-col flex-1 overflow-hidden">
+      <!-- ! Header -->
+      <app-header></app-header>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
