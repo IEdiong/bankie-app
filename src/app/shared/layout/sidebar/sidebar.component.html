@@ -42,9 +42,12 @@
 
   <nav class="mt-10">
     <a
-      class="flex items-center px-6 py-2 mt-4 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+      #rla1="routerLinkActive"
       [routerLink]="['dashboard']"
       routerLinkActive="bg-gray-700 bg-opacity-25 text-gray-100"
+      class="flex items-center px-6 py-2 mt-4 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+      [ngClass]="{ 'text-gray-500': !rla1.isActive }"
+      (click)="closeSidebar()"
     >
       <svg
         class="w-6 h-6"
@@ -71,9 +74,12 @@
     </a>
 
     <a
-      class="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+      #rla2="routerLinkActive"
       [routerLink]="['transactions']"
       routerLinkActive="bg-gray-700 bg-opacity-25 text-gray-100"
+      class="flex items-center px-6 py-2 mt-4 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+      [ngClass]="{ 'text-gray-500': !rla2.isActive }"
+      (click)="closeSidebar()"
     >
       <svg
         class="w-6 h-6"
@@ -94,9 +100,12 @@
     </a>
 
     <a
-      class="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+      #rla3="routerLinkActive"
       [routerLink]="['users']"
       routerLinkActive="bg-gray-700 bg-opacity-25 text-gray-100"
+      class="flex items-center px-6 py-2 mt-4 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+      [ngClass]="{ 'text-gray-500': !rla3.isActive }"
+      (click)="closeSidebar()"
     >
       <svg
         class="w-6 h-6"
@@ -117,9 +126,12 @@
     </a>
 
     <a
-      class="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+      #rla4="routerLinkActive"
       [routerLink]="['settings']"
       routerLinkActive="bg-gray-700 bg-opacity-25 text-gray-100"
+      class="flex items-center px-6 py-2 mt-4 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+      [ngClass]="{ 'text-gray-500': !rla4.isActive }"
+      (click)="closeSidebar()"
     >
       <svg
         class="w-6 h-6"

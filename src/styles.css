@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: #edf2f7;
+@layer base {
+  body {
+    background: #edf2f7;
+  }
 }
